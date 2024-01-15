@@ -1,0 +1,12 @@
+clearml
+loguru
+Ninja
+numba
+opencv-contrib-python
+pandas
+scikit-image
+tabulate
+tensorboardX
+Pillow==9.4.0
+numpy==1.23.5
+visvalingamwyatt=0.2.0
