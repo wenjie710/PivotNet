@@ -58,7 +58,7 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
 
 - **g. Install PivotNet.**
   ```shell
-  git clone git@git-core.megvii-inc.com:qiaolimeng/pivotnet.git
+  git clone git@github.com:wenjie710/PivotNet.git
   cd pivotnet
   pip3 install -r requirement.txt
   ```
