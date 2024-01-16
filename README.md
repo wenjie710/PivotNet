@@ -4,7 +4,7 @@
 #
 ### NEWS !!!
 * **`Jan. 15th, 2024`:** :rocket: :rocket: :rocket: The official implementation of our PivotNet is released now. Enjoy it!
-* **`Jul. 14th, 2023`:** :clap: Our **PivotNet** is accepted by ICCV 2023 ! Refer to the **[Long-version Paper](https://arxiv.org/pdf/2308.16477)** for more details.zz
+* **`Jul. 14th, 2023`:** :clap: Our **PivotNet** is accepted by ICCV 2023 ! Refer to the **[Long-version Paper](https://arxiv.org/pdf/2308.16477)** for more details.
 * **`May. 26th, 2023`:** :trophy: Our team win the **Championship** and the **Innovation-Award** of the CVPR23 *Online HD Map Construction Challenge* ! [ **[Leaderboard](https://opendrivelab.com/AD23Challenge.html#online_hd_map_construction)** / **[Tech-Report](https://arxiv.org/abs/2306.10301)**]
 * **`Feb. 28th, 2023`:** :clap: Our **BeMapNet** is accepted by CVPR 2023 ! Refer to the **[Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Qiao_End-to-End_Vectorized_HD-Map_Construction_With_Piecewise_Bezier_Curve_CVPR_2023_paper.html)** for more details. [**[Long version on Arxiv](https://arxiv.org/pdf/2306.09700)** / **[Code](https://github.com/er-muyue/BeMapNet/tree/main)**]
 
@@ -81,25 +81,17 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
     ```shell
     cd /path/to/pivotnet
     python3 tools/bezier_converter/nuscenes/convert.py -d ./data # generate pivot-annotation only
-    python3 tools/bezier_converter/nuscenes/convert.py -d ./data --bezier   # generate both pivot and bezier annotatation (more time needed)
-    ```
-  - **OR** download from [here](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet.zip) and put it into `/path/to/bemapnet/data/nuscenes`
-    ```shell
-    cd /path/to/bemapnet
-    mkdir data/nuscenes/customer
-    cd data/nuscenes/customer
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet.zip .
-    unzip bemapnet.zip bemapnet
+    OR python3 tools/bezier_converter/nuscenes/convert.py -d ./data --bezier   # generate both pivot and bezier annotatation (more time needed)
     ```
 
 - **b. Weights: Public-Pretrain-Models**
   - Download public pretrain-weights as backbone initialization.
     ```shell
-    cd /path/to/bemapnet
+    cd /path/to/pivotnet
     cd assets/weights
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/efficientnet-b0-355c32eb.pth .
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/resnet50-0676ba61.pth .
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/upernet_swin_tiny_patch4_window7_512x512.pth .
+    wget https://github.com/wenjie710/PivotNet/releases/download/v1.0/efficientnet-b0-355c32eb.pth .
+    wget https://github.com/wenjie710/PivotNet/releases/download/v1.0/resnet50-0676ba61.pth .
+    wget https://github.com/wenjie710/PivotNet/releases/download/v1.0/upernet_swin_tiny_patch4_window7_512x512.pth .
     ``` 
   
 - **c. Check: Project-Structure**
@@ -159,18 +151,18 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
 
   | Model | Config | Schd | mAP<sup>divider</sup> | mAP<sup>pedcross</sup> |mAP<sup>boundary</sup> | mAP<sup>avg</sup> | Download |
   | :---: | :---: | :---: | :---: | :---:|:---:| :---: | :---: |
-  |PivotNet-Effb0| [config](configs/pivotnet_nuscenes_effb0.py) | 30ep | 59.3 | 54.1 | 60.0 | 57.8 |[model](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_effb0_ep30_model.pth)/[train](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_effb0_ep30_train.log)/[eval](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_effb0_ep30_eval.log) |
-  |PivotNet-Res50| [config](configs/pivotnet_nuscenes_res50.py) | 30ep | 58.0 | 53.5 | 59.7 | 57.1 |[model](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_res50_ep30_model.pth)/[train](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_res50_ep30_train.log)/[eval](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_res50_ep30_eval.log) |
-  |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 30ep | 62.9 | 57.9 | 64.0 | 61.6 |[model](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_swint_ep30_model.pth)/[train](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_swint_ep30_train.log)/[eval](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_swint_ep30_eval.log) |
+  |PivotNet-Effb0| [config](configs/pivotnet_nuscenes_effb0.py) | 30ep | 59.3 | 54.1 | 60.0 | 57.8 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30_train.log)|
+  |PivotNet-Res50| [config](configs/pivotnet_nuscenes_res50.py) | 30ep | 58.0 | 53.5 | 59.7 | 57.1 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30_train.log)|
+  |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 30ep | 62.9 | 57.9 | 64.0 | 61.6 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30_train.log)|
 
 
 - **b. Hard-Setting --> AP-threshold is `0.2m, 0.5m, 1.0m` (Recommended as a more practical HD map evaluation protocol)**
 
   | Model | Config | Schd | mAP<sup>divider</sup> | mAP<sup>pedcross</sup> |mAP<sup>boundary</sup> | mAP<sup>avg</sup> | Download |
   | :---: | :---: | :---: | :---: | :---:|:---:| :---: | :---: |
-  |PivotNet-Effb0| [config](configs/bemapnet_nuscenes_effb0.py) | 30ep | 44.0 | 35.9 | 39.7 | 39.8 |[model](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_effb0_ep30_model.pth)/[train](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_effb0_ep30_train.log)/[eval](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_effb0_ep30_eval.log) |
-  |PivotNet-Res50| [config](configs/bemapnet_nuscenes_res50.py) | 30ep | 43.5 | 35.6 | 40.4 | 39.8 |[model](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_res50_ep30_model.pth)/[train](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_res50_ep30_train.log)/[eval](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_res50_ep30_eval.log) |
-  |PivotNet-SwinT| [config](configs/bemapnet_nuscenes_swint.py) | 30ep | 47.7 | 39.4 | 43.7 | 43.6 |[model](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_swint_ep30_model.pth)/[train](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_swint_ep30_train.log)/[eval](https://github.com/er-muyue/BeMapNet/releases/download/v1.0/bemapnet_nuscenes_swint_ep30_eval.log) |
+  |PivotNet-Effb0| [config](configs/pivotnet_nuscenes_effb0.py) | 30ep | 44.0 | 35.9 | 39.7 | 39.8 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30_train.log) |
+  |PivotNet-Res50| [config](configs/pivotnet_nuscenes_res50.py) | 30ep | 43.5 | 35.6 | 40.4 | 39.8 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30_train.log) |
+  |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 30ep | 47.7 | 39.4 | 43.7 | 43.6 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30_train.log) |
 
 </details>
 
@@ -203,8 +195,3 @@ If you find PivotNet/BeMapNet/MachMap is useful in your research or applications
 }
 
 ```
-
-
-## Stars
-
-[![Stargazers over time](https://starchart.cc/er-muyue/BeMapNet.svg)](https://starchart.cc/er-muyue/BeMapNet)
