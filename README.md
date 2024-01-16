@@ -50,7 +50,7 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
   python3 -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu111/torch1.10/index.html
   ```
 
-- **f. Install Deformable Transformer.**
+- **f. Compiling CUDA operators for Deformable Transformer.**
   ```shell
   cd mapmaster/models/bev_decoder/deform_transformer/ops
   bash make.sh
