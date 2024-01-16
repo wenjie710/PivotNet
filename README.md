@@ -81,17 +81,17 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
     ```shell
     cd /path/to/pivotnet
     python3 tools/bezier_converter/nuscenes/convert.py -d ./data # generate pivot-annotation only
-    python3 tools/bezier_converter/nuscenes/convert.py -d ./data --bezier   # generate both pivot and bezier annotatation (more time needed)
+    OR python3 tools/bezier_converter/nuscenes/convert.py -d ./data --bezier   # generate both pivot and bezier annotatation (more time needed)
     ```
 
 - **b. Weights: Public-Pretrain-Models**
   - Download public pretrain-weights as backbone initialization.
     ```shell
-    cd /path/to/bemapnet
+    cd /path/to/pivotnet
     cd assets/weights
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/efficientnet-b0-355c32eb.pth .
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/resnet50-0676ba61.pth .
-    wget https://github.com/er-muyue/BeMapNet/releases/download/v1.0/upernet_swin_tiny_patch4_window7_512x512.pth .
+    wget https://github.com/wenjie710/PivotNet/releases/download/v1.0/efficientnet-b0-355c32eb.pth .
+    wget https://github.com/wenjie710/PivotNet/releases/download/v1.0/resnet50-0676ba61.pth .
+    wget https://github.com/wenjie710/PivotNet/releases/download/v1.0/upernet_swin_tiny_patch4_window7_512x512.pth .
     ``` 
   
 - **c. Check: Project-Structure**
@@ -195,8 +195,3 @@ If you find PivotNet/BeMapNet/MachMap is useful in your research or applications
 }
 
 ```
-
-
-## Stars
-
-[![Stargazers over time](https://starchart.cc/er-muyue/BeMapNet.svg)](https://starchart.cc/er-muyue/BeMapNet)
