@@ -4,7 +4,7 @@
 #
 ### NEWS !!!
 * **`Jan. 15th, 2024`:** :rocket: :rocket: :rocket: The official implementation of our PivotNet is released now. Enjoy it!
-* **`Jul. 14th, 2023`:** :clap: Our **PivotNet** is accepted by ICCV 2023 ! Refer to the **[Long-version Paper](https://arxiv.org/pdf/2308.16477)** for more details.zz
+* **`Jul. 14th, 2023`:** :clap: Our **PivotNet** is accepted by ICCV 2023 ! Refer to the **[Long-version Paper](https://arxiv.org/pdf/2308.16477)** for more details.
 * **`May. 26th, 2023`:** :trophy: Our team win the **Championship** and the **Innovation-Award** of the CVPR23 *Online HD Map Construction Challenge* ! [ **[Leaderboard](https://opendrivelab.com/AD23Challenge.html#online_hd_map_construction)** / **[Tech-Report](https://arxiv.org/abs/2306.10301)**]
 * **`Feb. 28th, 2023`:** :clap: Our **BeMapNet** is accepted by CVPR 2023 ! Refer to the **[Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Qiao_End-to-End_Vectorized_HD-Map_Construction_With_Piecewise_Bezier_Curve_CVPR_2023_paper.html)** for more details. [**[Long version on Arxiv](https://arxiv.org/pdf/2306.09700)** / **[Code](https://github.com/er-muyue/BeMapNet/tree/main)**]
 
