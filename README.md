@@ -15,7 +15,7 @@
 
 ## <div align="center">Documentation</div>
 
-We build the released version of **PivotNet** upon [BeMapNet](https://github.com/er-muyue/BeMapNet/tree/main) project. Therefore, this project support the reproduction of **both** PivotNet and BeMapNet.
+We build the released version of **PivotNet** upon [BeMapNet](https://github.com/er-muyue/BeMapNet/tree/main) project. Therefore, this project supports the reproduction of **both** PivotNet and BeMapNet.
 
 <details open>
 <summary><b>Step-by-step Installation</b></summary>
@@ -154,6 +154,7 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
   |PivotNet-Effb0| [config](configs/pivotnet_nuscenes_effb0.py) | 30ep | 59.3 | 54.1 | 60.0 | 57.8 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30_train.log)|
   |PivotNet-Res50| [config](configs/pivotnet_nuscenes_res50.py) | 30ep | 58.0 | 53.5 | 59.7 | 57.1 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30_train.log)|
   |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 30ep | 62.9 | 57.9 | 64.0 | 61.6 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30_train.log)|
+  |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 110ep | 67.8 | 62.1 | 69.2 | 66.4 | model / train and eval |
 
 
 - **b. Hard-Setting --> AP-threshold is `0.2m, 0.5m, 1.0m` (Recommended as a more practical HD map evaluation protocol)**
@@ -163,6 +164,8 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
   |PivotNet-Effb0| [config](configs/pivotnet_nuscenes_effb0.py) | 30ep | 44.0 | 35.9 | 39.7 | 39.8 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_effb0_ep30_train.log) |
   |PivotNet-Res50| [config](configs/pivotnet_nuscenes_res50.py) | 30ep | 43.5 | 35.6 | 40.4 | 39.8 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_res50_ep30_train.log) |
   |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 30ep | 47.7 | 39.4 | 43.7 | 43.6 |[model](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30.pth)/[train and eval](https://github.com/wenjie710/PivotNet/releases/download/v1.0/pivotnet_nuscenes_swint_ep30_train.log) |
+  |PivotNet-SwinT| [config](configs/pivotnet_nuscenes_swint.py) | 110ep | 54.1 | 43.3 | 50.3 | 49.3 | model / train and eval |
+  
 
 </details>
 
