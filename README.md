@@ -80,8 +80,8 @@ We build the released version of **PivotNet** upon [BeMapNet](https://github.com
   - Generate Pivot/Bezier-annotations from NuScenes's raw-annotations.
     ```shell
     cd /path/to/pivotnet
-    python3 tools/bezier_converter/nuscenes/convert.py -d ./data # generate pivot-annotation only
-    OR python3 tools/bezier_converter/nuscenes/convert.py -d ./data --bezier   # generate both pivot and bezier annotatation (more time needed)
+    python3 tools/anno_converter/nuscenes/convert.py -d ./data # generate pivot-annotation only
+    OR python3 tools/anno_converter/nuscenes/convert.py -d ./data --bezier   # generate both pivot and bezier annotatation (more time needed)
     ```
 
 - **b. Weights: Public-Pretrain-Models**
